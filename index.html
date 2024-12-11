@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="front-end, back-end, developer">
+  <meta name="description" content="Mi portafolio de Desarrolladora">
+  <meta name="author" content="Alma Gómez">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Phetsarath:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Portafolio</title>
+  <link rel="shortcut icon" href="assets/img/AGLogo.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="module" src="assets/js/main.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script
+      </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "l06l--H1AeBxv_61y",
+      });
+    })();
+
+  </script>
+</head>
+
+<body>
+
+  <div class="loader flex--container">
+    <img src="assets/img/AGLogo.png" alt="Loader..." class="loader__logo">
+  </div>
+  </div>
+  <header class="header">
+    <nav class="navbar grid--container flex--container">
+      <a class="navbar__logo flex--container" href="#"><i class="bx bxs-registered"></i>Alma Gómez</a>
+
+      <div id="nav" class="navbar__menu">
+        <a href="#close"><i class="bx bx-x btn__close navbar__icon flex--container"></i></a>
+
+        <ul class="navbar__list flex--container">
+          <li class="navbar__item">
+            <a class="navbar__link active" href="#home">Inicio</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#about">Acerca de Mí</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#skills">Habilidades</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#projects">Proyectos</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar__toggles flex--container">
+        <div class="navbar__toggle--darkmode flex--container">
+          <input type="checkbox" name="color-scheme" id="darkmode-toggle" class="navbar__toggle--darkmode-input" />
+          <label for="darkmode-toggle" class="navbar__toggle--darkmode-label">
+            <i class="bx bx-sun navbar__toggle--darkmode-sun"></i>
+            <i class="bx bx-moon navbar__toggle--darkmode-moon"></i>
+          </label>
+        </div>
+        <div class="navbar__toggle--language flex--container">
+          <input type="checkbox" name="language-toggle" id="language-toggle" class="navbar__toggle--language-input" />
+          <label for="language-toggle" class="navbar__toggle--language-label">
+            <i class="bx bx-spain navbar__toggle--language-spanish"></i>
+            <i class="bx bx-english navbar__toggle--language-english"></i>
+          </label>
+        </div>
+      </div>
+      <a href="#nav"><i class="bx bx-menu btn__open navbar__icon"></i></a>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById("language-toggle").addEventListener("change", function () {
+      if (this.checked) {
+        window.location.href = "index-en.html";
+      } else {
+        window.location.href = "index.html";
+      }
+    });
+
+
+    if (window.location.href.includes("index-en.html")) {
+      document.getElementById("language-toggle").checked = true;
+    } else {
+      document.getElementById("language-toggle").checked = false;
+    }
+
+    const darkmodeToggle = document.getElementById("darkmode-toggle");
+
+
+    const darkModeEnabled = localStorage.getItem("darkMode") === "true";
+    darkmodeToggle.checked = darkModeEnabled;
+
+
+    if (darkModeEnabled) {
+      document.body.classList.add("dark-mode");
+    }
+
+
+    darkmodeToggle.addEventListener("change", function () {
+      if (this.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "true");
+      } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "false");
+      }
+    });
+  </script>
+
+
+
+  <main>
+    <section id="home" class="home">
+      <i class="bx bxl-html5 home__layer home__layer--1" data-speed="-5"></i>
+      <i class="bx bxl-javascript home__layer home__layer--2" data-speed="5"></i>
+      <i class="bx bxl-css3 home__layer home__layer--3" data-speed="2"></i>
+      <i class="bx bxl-nodejs home__layer home__layer--4" data-speed="6"></i>
+      <i class="bx bxl-react home__layer home__layer--5" data-speed="8"></i>
+      <i class="bx bxl-tailwind-css home__layer home__layer--6" data-speed="-2"></i>
+      <i class="bx bxl-redux home__layer home__layer--7" data-speed="4"></i>
+      <i class="bx bxl-typescript home__layer home__layer--8" data-speed="-2"></i>
+      <i class="bx bxl-git home__layer home__layer--9" data-speed="6"></i>
+      <i class="bx bxl-graphql home__layer home__layer--10" data-speed="-7"></i>
+      <i class="bx bx-code-alt home__layer home__layer--11" data-speed="-5"></i>
+      <div class="home__container grid--container">
+        <div class="home__image">
+          <img src="assets/img/AGFOTO.png" alt="profile photo" title="Alma Gómez" />
+        </div>
+
+        <ul class="home__social flex--container">
+          <li class="home__social-item">
+            <a class="home__social-link" href="https://www.linkedin.com/in/alma-gomez-82b0b2341" target="_blank"><i
+                class="bx bxl-linkedin"></i></a>
+          </li>
+          <li class="home__social-item">
+            <a class="home__social-link" href="https://wa.me/525515574798?text=Hola%20Quiero%20información."
+              target="_blank"><i class="bx bxl-whatsapp"></i></a>
+          </li>
+          <li class="home__social-item">
+            <a class="home__social-link" href="https://github.com/AlmaGmz/Flexbox-Exercise.git" target="_blank"><i
+                class="bx bxl-github"></i></a>
+          </li>
+          <li class="home__social-item">
+            <a class="home__social-link" href="mailto: almagomezcp@gmail.com" target="_blank"><i
+                class="bx bx-envelope"></i></a>
+          </li>
+        </ul>
+
+        <div class="home__info">
+          <br>
+          <h1 class="home__title">Soy Alma Gómez</h1><br>
+
+          <p class="home__description">
+            Soy una desarrolladora web, creando soluciones eficientes y modernas.
+          </p>
+        </div>
+
+        <div class="home__buttons">
+          <a class="btn btn--primary" href="assets/pdf/CV Alma Gómez.pdf" title="Descargar mi CV"
+            download="CV_Alma Gómez" rel="noreferrer nofollow">
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <h2 class="section__title">Acerca de Mí</h2>
+
+      <div class="about__container grid--container">
+        <p class="about__description">
+          Me encanta crear experiencias digitales que no solo se vean bien, sino que también ofrezcan el mejor
+          rendimiento; mi objetivo es asegurar que cada proyecto sea accesible y fácil de usar aplicando
+          soluciones prácticas.
+        </p>
+
+        <div class="about__cards flex--container">
+
+          <div class="about__card">
+            <div class="about__card--text">
+              <p>Diseño Responsivo</p>
+            </div>
+
+            <img class="about__card--img" src="assets/img/AGacercademi1.jpg" alt="Diseños Responsivos"
+              title="Diseños Responsivos" />
+
+          </div>
+
+          <div class="about__card">
+            <div class="about__card--text">
+              <p>Trabajo en equipo</p>
+            </div>
+            <img class="about__card--img" src="assets/img/AGacercademi2.jpg" alt="Trabajo en equipo"
+              title="Trabajo en equipo" />
+          </div>
+
+          <div class="about__card">
+            <div class="about__card--text">
+              <p>Observando el detalle</p>
+            </div>
+            <img class="about__card--img" src="assets/img/AGacercademi3.jpg" alt="Observando el detalle"
+              title="Observando el detalle" />
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section">
+      <h2 class="section__title">Habilidades</h2>
+
+      <div class="skills__container grid--container">
+        <p class="skills__description flex--container">
+          He trabajado tecnologías como HTML, CSS, JavaScript y React, y tengo un enfoque centrado en crear
+          sitios web modernos, funcionales y fáciles de usar.
+        </p>
+
+        <div class="skills__wrapper flex--container">
+          <div class="skills__cards flex--container">
+
+            <details class="skills__cards-container" name="moreInfo" open>
+              <summary class="skills__cards-title flex--container">
+                <i class="bx bxl-html5 flex--container"></i>
+              </summary>
+              <div class="skills__card-container">
+                <h3 class="skills__card-title">HTML</h3>
+
+                <p class="skills__card-description">
+                  Mi conocimiento de HTML me permite crear documentos bien organizados y semánticamente correctos;
+                  entiendo la importancia de un marcado limpio y accesible, lo cual no solo
+                  mejora la experiencia del usuario, sino que también optimiza el SEO.
+                </p>
+              </div>
+            </details>
+
+            <details class="skills__cards-container" name="moreInfo">
+              <summary class="skills__cards-title flex--container">
+                <i class="bx bxl-css3 flex--container"></i>
+              </summary>
+              <div class="skills__card-container">
+                <h3 class="skills__card-title">CSS3</h3>
+
+                <p class="skills__card-description">
+                  He trabajado, en el diseño responsivo,para asegurar que las páginas web se adapten correctamente a
+                  diferentes tamaños de pantalla; aplicando además, buenas prácticas de organización y mantenimiento del
+                  código,para facilitar la escalabilidad de los proyectos.
+                </p>
+              </div>
+            </details>
+
+            <details class="skills__cards-container" name="moreInfo">
+              <summary class="skills__cards-title flex--container">
+                <i class="bx bxl-javascript flex--container"></i>
+              </summary>
+              <div class="skills__card-container">
+                <h3 class="skills__card-title">Javascript</h3>
+
+                <p class="skills__card-description">
+                  A través de JavaScript puedo agregar funcionalidad avanzada a las páginas web, como la validación de
+                  formularios, la manipulación del DOM y la creación de interacciones dinámicas sin necesidad de
+                  recargar la página.
+
+                </p>
+              </div>
+            </details>
+
+            <details class="skills__cards-container" name="moreInfo">
+              <summary class="skills__cards-title flex--container">
+                <i class="bx bxl-react flex--container"></i>
+              </summary>
+              <div class="skills__card-container">
+                <h3 class="skills__card-title">React</h3>
+
+                <p class="skills__card-description">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Est, fuga nesciunt, officia nobis blanditiis in aperiam
+                  voluptatum officiis repellendus beatae consectetur.
+
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="skills__tags flex--container">
+          <h3 class="skills__tags-title">Habilidades Blandas</h3>
+          <div class="skills__tags-container flex--container">
+            <span class="skills__tag">Comprometida</span>
+            <span class="skills__tag">Trabajo en equipo</span>
+            <span class="skills__tag">Creativa</span>
+            <span class="skills__tag">Responsable</span>
+            <span class="skills__tag">Proactiva</span>
+            <span class="skills__tag">Autodidacta</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section">
+      <h2 class="section__title">Proyectos</h2>
+
+      <div class="projects__container grid--container">
+        <div class="projects__project">
+          <div class="projects__inner grid--container">
+            <div class="projects__image">
+              <img src="assets/img/modelo de caja.png" alt="project 1" title="Modelo de caja" />
+            </div>
+
+            <div class="projects__info">
+              <h3 class="projects__name">Caja sin uso de flexbox.</h3>
+              <p class="projects__description">
+                Caja realizada sin uso de flexbox.
+              </p>
+
+              <div class="projects__buttons">
+                <a href="https://github.com/AlmaGmz/square-exercise.git" class="btn projects__button"
+                  target="_blank">VER CÓDIGO</a>
+
+                <a href="assets/img/modelo de caja.png" class="btn projects__button" target="_blank">VER DEMO</a>
+                </button>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__project">
+          <div class="projects__inner grid--container">
+            <div class="projects__image">
+              <img src="assets/img/AG Caja Flexbox.png" alt="project 1" title="Diseño Responsivo" />
+            </div>
+
+            <div class="projects__info">
+              <h3 class="projects__name">Caja Flexbox</h3>
+              <p class="projects__description">
+                Modelo de Caja con Flexbox, uso Responsivo.
+              </p>
+
+              <div class="projects__buttons">
+                <a href="assets/img/AG FLEXBOX .mp4" class="btn projects__button" target="_blank">VER DEMO</a>
+
+
+                <a href="https://github.com/AlmaGmz/Flexbox-Exercise.git" class="btn projects__button"
+                  target="_blank">VER CODIGO</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__project">
+          <div class="projects__inner grid--container">
+            <div class="projects__image">
+              <img src="assets/img/project3.jpg" alt="project 1" title="CRUD con React" />
+            </div>
+
+            <div class="projects__info">
+              <h3 class="projects__name">Proyecto 3</h3>
+              <p class="projects__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects__buttons">
+                <button class="btn projects__button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects__button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__project">
+          <div class="projects__inner grid--container">
+            <div class="projects__image">
+              <img src="assets/img/project4.png" alt="project 1" title="Aplicación del tiempo con React" />
+            </div>
+
+            <div class="projects__info">
+              <h3 class="projects__name">Proyecto 4</h3>
+              <p class="projects__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <div class="projects__buttons">
+                <button class="btn projects__button" type="button">
+                  VER DEMO
+                </button>
+                <button class="btn projects__button" type="button">
+                  VER CÓDIGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact section">
+      <h2 class="section__title">Contacto</h2>
+
+      <div class="contact__container grid--container">
+        <div class="contact__info">
+          <h3 class="contact__info-title">Información de contacto</h3>
+          <p class="contact__info-description">
+            Alma Gómez.
+          </p>
+
+          <address class="contact__info-data">
+            <div class="contact__info-item">
+              <i class="bx bxl-whatsapp"></i>
+
+              <span class="contact__info-number">
+                <a href="https://wa.me/525515574798?text=Hola%20Quiero%20Información" target="_blank"
+                  rel="noreferrer nofollow">Enviar mensaje a WhatsApp</a>
+              </span>
+            </div>
+
+            <div class="contact__info-item">
+              <i class="bx bx-phone"></i>
+
+              <span class="contact__info-number">
+                <a href="tel:52-55 15 5747 98" target="_blank" rel="noreferrer nofollow">
+                  llamar al 52 55 15 57 47 98
+                </a>
+              </span>
+            </div>
+
+            <div class="contact__info-item">
+              <i class="bx bxs-envelope"></i>
+
+              <span class="contact__info-mail">
+                <a id="mail" href="mailto:test@correo.com" target="_blank" rel="noreferrer nofollow">
+                  almagomezcp@gmail.com
+                </a>
+              </span>
+            </div>
+
+            <div class="contact__info-item">
+              <i class="bx bx-map"></i>
+
+              <span class="contact__info-map"> CDMX, México. </span>
+            </div>
+          </address>
+        </div>
+        <div class="contact__form">
+          <h3 class="contact__form-title">Enviar mensaje</h3>
+
+          <form id="form" class="contact__form-container">
+            <div class="contact__form-group">
+              <label for="name" class="contact__form-label">Nombre</label>
+              <input type="text" id="name" name="name" class="contact__form-input" required title="Tu nombre" />
+            </div>
+
+            <div class="contact__form-group">
+              <label for="email" class="contact__form-label">Correo</label>
+              <input type="email" id="email" name="email" class="contact__form-input" required title="Tu email" />
+            </div>
+
+            <div class="contact__form-group">
+              <label for="subject" class="contact__form-label">Asunto</label>
+              <input type="text" id="subject" name="subject" class="contact__form-input" required title="Asunto" />
+            </div>
+
+            <div class="contact__form-group">
+              <label for="message" class="contact__form-label">Mensaje</label>
+              <textarea id="message" name="message" cols="30" rows="10" class="contact__form-input" required
+                title="Tu mensaje"></textarea>
+            </div>
+            <dialog class="contact__form-modal" id="modal">
+              Formulario enviado con éxito!
+              <button type="reset" id="btn_close-modal">Cerrar</button>
+            </dialog>
+
+            <button type="submit" class="btn contact__form-button">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <div class="footer__container grid--container">
+      <div class="footer__info">
+        <h3 class="footer__title">Alma Gómez</h3>
+        <p class="footer__description">
+          Soy una desarrolladora web, creando soluciones eficientes y modernas.
+        </p>
+      </div>
+
+      <div class="footer__social">
+        <h3 class="footer__title">Redes Sociales</h3>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://wa.me/525515574798?text=Hola%20Quiero%20información."
+              target="_blank" rel="noreferrer nofollow"><i class="bx bxl-whatsapp"></i></a>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="mailto: almagomezcp@gmail.com" target="_blank"
+              rel="noreferrer nofollow"><i class="bx bx-envelope"></i></a>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://github.com/AlmaGmz/Flexbox-Exercise.git" target="_blank"
+              rel="noreferrer nofollow"><i class="bx bxl-github"></i>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.linkedin.com/in/alma-gomez-82b0b2341" target="_blank"
+              rel="noreferrer nofollow"><i class="bx bxl-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__copy">&#64;<span> </span>Todos los derechos reservados</p>
+  </footer>
+</body>
+
+</html>
