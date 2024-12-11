@@ -396,8 +396,8 @@ html {
 	}
 	
 	.home__layer--1 {
-		top: 15%;
-		left: 3%;
+		top: 7%;
+		left: 5%;
 	}
 
 	.home__layer--2 {
@@ -407,12 +407,12 @@ html {
 
 	.home__layer--3 {
 		top: 65%;
-		left: 80%;
+		left: 85%;
 	}
 
 	.home__layer--4 {
 		top: 15%;
-		left: 70%;
+		left: 80%;
 	}
 
 	.home__layer--5 {
@@ -426,27 +426,27 @@ html {
 	}
 
 	.home__layer--7 {
-		top: 75%;
-		left: 45%;
+		top: 92%;
+		left: 50%;
 	}
 
 	.home__layer--8 {
-		top: 55%;
-		left: 10%
+		top: 85%;
+		left: 78%;
 	}
 
 	.home__layer--9 {
-		top: 45%;
-		left: 2%;
+		top: 48%;
+		left: 1.15%;
 	}
 
 	.home__layer--10 {
-		top: 78%;		
+		top: 80%;		
 	}
 
 	.home__layer--11 {
 		top: 10%;
-		left:15%;
+		left:20%;
 	}
 	.home__image{
 		max-width: 210px;
@@ -481,8 +481,8 @@ html {
 		.home__info {
 			.home__title,
 			.home__description {
-				text-align: center;
-				font-size: 2rem;
+				text-align:left;
+				font-size: 1rem;
 				font-weight:var(--font-semi-bold); 
 				text-shadow: 3px 3px 7px #ea495955;
 
@@ -496,7 +496,7 @@ html {
 				width: 15ch;
 				animation: typing 2s infinite steps(15) alternate,
 					blink 0.3s infinite step-end alternate;
-				font-size: 3rem;
+				font-size: 1.3rem;
 				overflow: hidden;
 				font-weight:var(--font-semi-bold); 
 				text-shadow: 3px 3px 7px #ea495955; 
