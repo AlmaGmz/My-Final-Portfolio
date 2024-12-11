@@ -496,7 +496,7 @@ html {
 				width: 15ch;
 				animation: typing 2s infinite steps(15) alternate,
 					blink 0.3s infinite step-end alternate;
-				font-size: 1.3rem;
+				font-size: 1.5rem;
 				overflow: hidden;
 				font-weight:var(--font-semi-bold); 
 				text-shadow: 3px 3px 7px #ea495955; 
